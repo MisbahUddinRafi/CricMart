@@ -1,4 +1,5 @@
-[200~### Java & JavaFX ###
+[200~cat > .gitignore <<EOF
+### Java & JavaFX ###
 *.class
 *.jar
 *.war
@@ -52,4 +53,3 @@ nbdist/
 
 # Scene Builder temp files
 *.fxml~
-~
