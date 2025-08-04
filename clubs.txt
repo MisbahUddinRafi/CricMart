@@ -1,0 +1,14 @@
+abcdadmin,Abcd Club,ABC,Misbah Uddin Rafi,123456789,1
+abcadmin,Abcdefg,ABC,Abcd Efgh Ijkl,123456789,1
+cskadmin,Chennai Super Kings,CSK,MS Dhoni,32879333,5
+dcadmin,Delhi Capitals,DC,David Warner,92000000,0
+admin,Dummy Club,DC,Dummy,913939597,0
+gtadmin,Gujarat Titans,GT,Shubman Gill,98000000,1
+hwadmin,Hello World,HW,Abdul Jabbar,1234567890,1
+kkradmin,Kolkata Knight Riders,KKR,Shahrukh Khan,51037481,2
+lsgadmin,Lucknow Super Giants,LSG,KL Rahul,94000000,0
+miadmin,Mumbai Indians,MI,Rohit Sharma,100000000,5
+pbksadmin,Punjab Kings,PBKS,Shikhar Dhawan,91000000,0
+rradmin,Rajasthan Royals,RR,Sanju Samson,93000000,1
+rcbadmin,Royal Challengers Bangalore,RCB,Faf Du Plessis,21731037,1
+srhadmin,Sunrisers Hyderabad,SRH,Pat Cummins,96000000,1

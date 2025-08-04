@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+            fx:controller="controller.startAuctionController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@style1.css"
+            style="-fx-background-color: #33e6ff;">
+
+    <left>
+        <VBox spacing="0" alignment="CENTER" prefWidth="180" prefHeight="600"
+              style="-fx-background-color: linear-gradient(to bottom, #c2e3e3, #586e6e); -fx-padding: 20 10 20 10;">
+
+            <Label text="Auction Panel" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #2e4f4f; -fx-padding: 0 0 10 0;"/>
+
+            <Button styleClass="sidebar-button" text="Start Auction" prefHeight="50" maxWidth="180" onAction="#startAuction"/>
+            <Button fx:id="stopAuctionButton" styleClass="sidebar-button" text="Stop Auction" prefHeight="50" maxWidth="180" onAction="#stopAuction"/>
+            <Button fx:id="startBiddingButton" styleClass="sidebar-button" text="Start Bidding" prefHeight="50" maxWidth="180" onAction="#startBidding"/>
+            <Button fx:id="stopBiddingButton" styleClass="sidebar-button" text="Stop Bidding" prefHeight="50" maxWidth="180" onAction="#stopBidding"/>
+            <Button styleClass="sidebar-button" text="Next Player" prefHeight="50" maxWidth="180" onAction="#nextPlayer"/>
+
+            <VBox spacing="8" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+                <VBox spacing="2" alignment="CENTER"
+                      style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 6; -fx-padding: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0.3, 0, 1);">
+                    <Label text="CURRENT BID"
+                           style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #666666;"/>
+                    <Label fx:id="currentBidLabel"
+                           style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #d32f2f;"/>
+                </VBox>
+
+                <VBox spacing="2" alignment="CENTER"
+                      style="-fx-background-color: rgba(255,255,255,0.9); -fx-background-radius: 6; -fx-padding: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0.3, 0, 1);">
+                    <Label text="LEADING BIDDER"
+                           style="-fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #666666;"/>
+                    <Label fx:id="bidLeaderLabel"
+                           style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #1976d2;"/>
+                </VBox>
+
+                <VBox spacing="2" alignment="CENTER"
+                      style="-fx-background-color: rgba(255,69,58,0.95); -fx-background-radius: 8; -fx-padding: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0.4, 0, 1);">
+                    <Label text="TIME LEFT"
+                           style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label fx:id="timerLabel" text="00"
+                           style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label text="seconds"
+                           style="-fx-font-size: 9px; -fx-text-fill: rgba(255,255,255,0.8);"/>
+                </VBox>
+            </VBox>
+
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane styleClass="centerpane">
+            <AnchorPane>
+                <AnchorPane fx:id="playerCardAnchorPane"
+                            prefWidth="720" prefHeight="600"
+                            AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"
+                            style="-fx-background-color: transparent;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="290.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/profileIcon1.png" />
+                            </image>
+                        </ImageView>
+                        <TextField editable="false" fx:id="playerNameField" alignment="CENTER" layoutX="270.0" layoutY="260.0" prefHeight="35.0" prefWidth="180.0" styleClass="display-field" />
+                        <TextField editable="false" fx:id="clubNameField" alignment="CENTER" layoutX="250.0" layoutY="305.0" prefHeight="35.0" prefWidth="220.0" styleClass="display-field">
+                            <cursor>
+                                <Cursor fx:constant="DEFAULT" />
+                            </cursor>
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </TextField>
+
+                        <Label layoutX="20.0" layoutY="80.0" text="Country: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="countryNameField" layoutX="110.0" layoutY="75.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="20.0" layoutY="130.0" text="Position: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="positionField" layoutX="110.0" layoutY="125.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="20.0" layoutY="180.0" text="Salary: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="salaryField" layoutX="110.0" layoutY="175.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="20.0" layoutY="370.0" text="Matches: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="matchesPlayedField" layoutX="110.0" layoutY="365.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="20.0" layoutY="420.0" text="Runs: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="runsScoredField" layoutX="110.0" layoutY="415.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="20.0" layoutY="470.0" text="Balls: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="ballsFacedField" layoutX="110.0" layoutY="465.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="20.0" layoutY="520.0" text="Fifties: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="fiftiesField" layoutX="110.0" layoutY="515.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="20.0" layoutY="570.0" text="Centuries: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="centuriesField" layoutX="110.0" layoutY="565.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="500.0" layoutY="80.0" text="Age: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="ageField" layoutX="590.0" layoutY="75.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="500.0" layoutY="130.0" text="Height: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="heightField" layoutX="590.0" layoutY="125.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="500.0" layoutY="180.0" text="Jersey: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="jerseyNumberField" layoutX="590.0" layoutY="175.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="500.0" layoutY="370.0" text="Overs: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="overField" layoutX="590.0" layoutY="365.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="500.0" layoutY="420.0" text="Wickets: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="wicketsField" layoutX="590.0" layoutY="415.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="480.0" layoutY="470.0" text="Runs Given: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="runsConcededField" layoutX="590.0" layoutY="465.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="480.0" layoutY="520.0" text="Hat-tricks: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="hattricksField" layoutX="590.0" layoutY="515.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                        <Label layoutX="480.0" layoutY="570.0" text="Base Price: " textFill="#aeded1">
+                            <font><Font name="Arial" size="18.0" /></font>
+                        </Label>
+                        <TextField editable="false" fx:id="basePriceField" layoutX="590.0" layoutY="565.0" prefHeight="30.0" prefWidth="130.0" styleClass="display-field" />
+
+                    </children>
+                </AnchorPane>
+
+                <Button fx:id="backButton" layoutX="680" layoutY="10"
+                        styleClass="logout-button"
+                        style="-fx-background-color: transparent;" onAction="#backToDash">
+                    <graphic>
+                        <ImageView fitWidth="40" fitHeight="40" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@images/backicon.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </AnchorPane>
+        </StackPane>
+    </center>
+</BorderPane>

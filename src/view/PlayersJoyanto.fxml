@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.PlayersController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="style1.css"
+            style="-fx-background-color: #33e6ff;">
+
+    <left>
+        <VBox spacing="0" alignment="CENTER" prefWidth="180" prefHeight="600"
+              style="-fx-background-color: linear-gradient(to bottom, #c2e3e3, #586e6e); -fx-padding: 20 10 20 10;">
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane>
+            <ImageView fitWidth="740" fitHeight="600" preserveRatio="false">
+                <image>
+                    <Image url="@images/image2.png"/>
+                </image>
+            </ImageView>
+
+            <AnchorPane prefWidth="720" prefHeight="600">
+                <Button fx:id="backButton" layoutX="30" layoutY="30"
+                        styleClass="logout-button"
+                        style="-fx-background-color: transparent;" onAction="#backToDash">
+                    <graphic>
+                        <ImageView fitWidth="60" fitHeight="60" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@images/backicon.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </AnchorPane>
+        </StackPane>
+    </center>
+</BorderPane>

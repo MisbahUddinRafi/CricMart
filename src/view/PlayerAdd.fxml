@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlayerAddController">
+
+    <!-- Background image -->
+    <ImageView fitHeight="600" fitWidth="900" preserveRatio="false">
+        <image>
+            <Image url="@images/image2.png"/>
+        </image>
+    </ImageView>
+
+    <BorderPane prefHeight="600.0" prefWidth="900.0">
+
+        <top>
+            <!-- Back Button in the top left corner -->
+            <Button fx:id="backButton" layoutX="30" layoutY="30" onAction="#goToAdminDashboard"
+                    style="-fx-background-color: transparent;" styleClass="logout-button">
+                <graphic>
+                    <ImageView fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@images/backicon.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </top>
+
+
+        <bottom>
+            <Button onAction="#addPlayer" prefWidth="150" styleClass="sidebar-button" text="Add Player"
+                    BorderPane.alignment="CENTER"/>
+        </bottom>
+
+
+        <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+                <children>
+                    <Label layoutX="25.0" layoutY="80.0" prefHeight="23.0" prefWidth="89.0" text="Name:"
+                           textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="playerNameField" layoutX="174.0" layoutY="75.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter name" styleClass="input-field"/>
+
+
+                    <Label layoutX="25.0" layoutY="130.0" prefHeight="23.0" prefWidth="89.0" text="Country: "
+                           textFill="#aeded1" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="749.6666666666666">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="countryNameField" layoutX="174.0" layoutY="125.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter country name" styleClass="input-field">
+                        <cursor>
+                            <Cursor fx:constant="DEFAULT"/>
+                        </cursor>
+                    </TextField>
+
+
+                    <Label layoutX="25.0" layoutY="180.0" text="Age: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="ageField" layoutX="174.0" layoutY="175.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter age" styleClass="input-field"/>
+
+
+                    <Label layoutX="25.0" layoutY="249.0" text="Matches: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="matchesPlayedField" layoutX="174.0" layoutY="245.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter number of matches played" styleClass="input-field"/>
+
+
+                    <Label layoutX="25.0" layoutY="299.0" text="Balls: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="ballsFacedField" layoutX="174.0" layoutY="295.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter balls faced" styleClass="input-field"/>
+
+
+                    <Label layoutX="25.0" layoutY="349.0" text="Fifties: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="fiftiesField" layoutX="174.0" layoutY="345.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter number of fifties" styleClass="input-field"/>
+
+
+                    <Label layoutX="25.0" layoutY="399.0" text="Wickets: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="wicketsField" layoutX="174.0" layoutY="395.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter number of wickets taken" styleClass="input-field"/>
+
+
+                    <Label layoutX="25.0" layoutY="449.0" text="Runs Conceded: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="runsConcededField" layoutX="174.0" layoutY="445.0" prefHeight="35.0"
+                               prefWidth="275.0" promptText="Enter number of runs conceded" styleClass="input-field"/>
+
+
+                    <Label layoutX="501.0" layoutY="80.0" text="Position: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <ChoiceBox fx:id="positionField" layoutX="599.0" layoutY="75.0" prefHeight="35.0" prefWidth="275.0"
+                               styleClass="choice-box"/>
+
+
+                    <Label layoutX="501.0" layoutY="130.0" text="Height: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="heightField" layoutX="599.0" layoutY="125.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter height" styleClass="input-field"/>
+
+
+                    <Label layoutX="501.0" layoutY="180.0" text="Jersey: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="jerseyNumberField" layoutX="599.0" layoutY="175.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter jersey number" styleClass="input-field"/>
+
+
+                    <Label layoutX="501.0" layoutY="249.0" text="Runs: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="runsScoredField" layoutX="599.0" layoutY="245.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter runs" styleClass="input-field"/>
+
+
+                    <Label layoutX="501.0" layoutY="299.0" text="Centuries: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="centuriesField" layoutX="599.0" layoutY="295.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter number of hundreds" styleClass="input-field"/>
+
+
+                    <Label layoutX="501.0" layoutY="349.0" text="Overs: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="overField" layoutX="599.0" layoutY="345.0" prefHeight="35.0" prefWidth="275.0"
+                               promptText="Enter number of overs bowled" styleClass="input-field"/>
+
+
+                    <Label layoutX="502.0" layoutY="399.0" text="Hat-tricks: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="hattricksField" layoutX="599.0" layoutY="395.0" prefHeight="35.0"
+                               prefWidth="275.0" promptText="Enter number hat-tricks taken" styleClass="input-field"/>
+
+
+                    <Label layoutX="496.0" layoutY="449.0" text="Base Price: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="basePriceField" layoutX="599.0" layoutY="445.0" prefHeight="35.0"
+                               prefWidth="275.0" promptText="Enter the base price" styleClass="input-field"/>
+
+
+                </children>
+            </AnchorPane>
+        </center>
+    </BorderPane>
+</StackPane>

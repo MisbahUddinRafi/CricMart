@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<StackPane xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.loginrelatedcontrollers.LoginPageController"
+           prefHeight="600.0"
+           prefWidth="900.0"
+           stylesheets="@style1.css">
+
+    <!-- Background image -->
+    <ImageView fitWidth="900" fitHeight="600" preserveRatio="false">
+        <image>
+            <Image url="@images/image2.png"/>
+        </image>
+    </ImageView>
+
+    <!-- VBox content on top of background-->
+    <VBox alignment="center"
+          spacing="20">
+        <padding>
+            <Insets bottom="20" left="20" right="20" top="20"/>
+        </padding>
+
+        <Label text="Welcome to CRICMART" textFill="#aeded1">
+            <font>
+                <Font name="Arial" size="28.0" />
+            </font>
+        </Label>
+
+        <Button onAction="#goToLogin" prefWidth="200" text="Log In" styleClass="sidebar-button"/>
+        <Button onAction="#goToSignUp" prefWidth="200" text="Sign Up" styleClass="sidebar-button"/>
+        <Button onAction="#goToExit" prefWidth="200" text="Exit" styleClass="logout-button"/>
+    </VBox>
+</StackPane>
+
+
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<!--<?import javafx.geometry.Insets?>-->
+<!--<?import javafx.scene.control.Button?>-->
+<!--<?import javafx.scene.control.Label?>-->
+<!--<?import javafx.scene.layout.VBox?>-->
+<!--<?import javafx.scene.text.Font?>-->
+
+
+<!--<VBox alignment="center"-->
+<!--      prefHeight="600.0"-->
+<!--      prefWidth="900.0"-->
+<!--      spacing="20"-->
+<!--      xmlns="http://javafx.com/javafx/23.0.1"-->
+<!--      xmlns:fx="http://javafx.com/fxml/1"-->
+<!--      fx:controller="controller.loginrelatedcontrollers.LoginPageController"-->
+<!--      stylesheets="@style1.css">-->
+
+
+<!--    <padding>-->
+<!--        <Insets bottom="20" left="20" right="20" top="20"/>-->
+<!--    </padding>-->
+
+<!--    <Label text="Welcome to CrickMart Login Page">-->
+<!--        <font>-->
+<!--            <Font name="System Bold" size="16.0"/>-->
+<!--        </font>-->
+<!--    </Label>-->
+
+<!--    <Button onAction="#goToLogin" prefWidth="200" text="Log In" styleClass="sidebar-button"/>-->
+<!--    <Button onAction="#goToSignUp" prefWidth="200" text="Sign Up" styleClass="sidebar-button"/>-->
+<!--    <Button onAction="#goToExit" prefWidth="200" text="Exit" styleClass="logout-button"/>-->
+
+<!--</VBox>-->
+
+

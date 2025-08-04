@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+    <top>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="logoutButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleLogOut" text="Log Out" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+      <VBox alignment="CENTER" prefHeight="247.0" prefWidth="600.0" spacing="15">
+      
+          <padding>
+            <Insets bottom="50" left="50" right="50" top="50" />
+         </padding>
+      
+          <Button onAction="#onSearchPlayer" prefHeight="25.0" prefWidth="103.0" text="Search Player" />
+          <Button onAction="#onSearchClub" prefHeight="25.0" prefWidth="103.0" text="Search Club" />
+          <Button onAction="#onAddPlayer" prefHeight="25.0" prefWidth="103.0" text="Add Player" />
+          <Button onAction="#onExit" prefHeight="25.0" prefWidth="103.0" text="Exit" />
+      </VBox>
+   </center>
+
+</BorderPane>

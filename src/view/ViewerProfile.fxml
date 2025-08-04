@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.userprofilerelatedcontrollers.ViewerProfileController">
+
+    <!-- Background image -->
+    <ImageView fitHeight="600" fitWidth="900" preserveRatio="false">
+        <image>
+            <Image url="@images/image2.png" />
+        </image>
+    </ImageView>
+
+    <BorderPane prefHeight="600.0" prefWidth="900.0">
+
+        <top>
+            <!-- Back Button in the top left corner -->
+            <Button fx:id="backButton" layoutX="30" layoutY="30" onAction="#goToBack" style="-fx-background-color: transparent;" styleClass="logout-button">
+                <graphic>
+                    <ImageView fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@images/backicon.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </top>
+
+
+        <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+                <children>
+
+
+                    <Label layoutX="323.0" layoutY="102.0" prefHeight="23.0" prefWidth="99.0" text="User type: " textFill="#aeded1" AnchorPane.leftAnchor="323.0" AnchorPane.rightAnchor="447.00000000000006">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="usertypeField" alignment="CENTER" editable="false" layoutX="430.0" layoutY="95.0" prefHeight="38.0" prefWidth="175.0" styleClass="display-field" text="Viewer">
+                        <cursor>
+                            <Cursor fx:constant="DEFAULT" />
+                        </cursor>
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </TextField>
+
+
+                    <Label layoutX="315.0" layoutY="160.0" prefHeight="23.0" prefWidth="115.0" text="Username: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="usernameField" alignment="CENTER" editable="false" layoutX="429.0" layoutY="153.0" prefHeight="38.0" prefWidth="175.0" styleClass="display-field" text="abcd">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                    </TextField>
+
+
+                    <Button layoutX="465.0" layoutY="227.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="175.0" styleClass="sidebar-button" text="Edit username" onAction="#goToEditUsername"/>
+                    <Button layoutX="250.0" layoutY="227.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="175.0" styleClass="sidebar-button" text="Edit password" onAction="#goToEditPassword"/>
+                    <Button layoutX="358.0" layoutY="290.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="175.0" styleClass="logout-button" text="Delete account" onAction="#onDeleteAccount"/>
+
+
+                    <Button fx:id="logoutButton" layoutX="773.0" layoutY="467.0" onAction="#handleLogOut" prefHeight="30" prefWidth="80" style="-fx-background-color: #ff4d4d; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="logout-button" text="Logout" />
+                </children>
+            </AnchorPane>
+        </center>
+    </BorderPane>
+</StackPane>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AdminDashboardController"
+            prefWidth="900" prefHeight="600"
+            stylesheets="@style1.css"
+            style="-fx-background-color: #33e6ff;">
+
+    <left>
+        <VBox spacing="0" alignment="CENTER" prefWidth="180" prefHeight="600"
+              style="-fx-background-color: linear-gradient(to bottom, #c2e3e3, #586e6e); -fx-padding: 20 10 20 10;">
+            <Button text="Search Player" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handleSearchPlayer"/>
+            <Button text="Players" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handlePlayers"/>
+            <Button text="Teams" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handleTeams"/>
+            <Button text="Start Auction" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handleStartAuction"/>
+            <Button text="Past Auctions" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handlePreviousAuctions"/>
+            <Button text="Remove Player" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handleRemove"/>
+            <Button text="Add New Player" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handleAddPlayer"/>
+            <Button text="Add New Club" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handleAddClub"/>
+            <Button text="Add New Admin" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handleAddAdmin"/>
+            <Button text="About Us" styleClass="sidebar-button" prefHeight="60" maxWidth="180" onAction="#handleAboutUs"/>
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane styleClass="center-pane">
+            <AnchorPane prefWidth="720" prefHeight="600">
+                <Button fx:id="iconButton" layoutX="680" layoutY="10"
+                        styleClass="logout-button"
+                        style="-fx-background-color: transparent;" onAction="#handleProfile">
+                    <graphic>
+                        <ImageView fitWidth="40" fitHeight="40" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@images/profile2.gif"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button text="Logout" fx:id="logoutButton"
+                        layoutX="620" layoutY="550"
+                        styleClass="logout-button"
+                        style="-fx-background-color: #ff4d4d; -fx-text-fill: white; -fx-font-weight: bold;"
+                        prefWidth="80" prefHeight="30" onAction="#handleLogOut" />
+            </AnchorPane>
+        </StackPane>
+    </center>
+</BorderPane>

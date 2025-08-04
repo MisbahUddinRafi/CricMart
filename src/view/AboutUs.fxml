@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.AboutUsController">
+
+    <center>
+        <StackPane>
+
+            <!-- Background Image -->
+            <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="false">
+                <image>
+                    <Image url="@images/IPLplayers2.png" />
+                </image>
+            </ImageView>
+
+            <!-- Foreground Layer -->
+            <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: rgba(0,0,0,0.5);">
+
+                <!-- Back Button -->
+                <Button fx:id="backButton" layoutX="30" layoutY="30" onAction="#onBackToMain" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="40" fitWidth="40" preserveRatio="true">
+                            <image>
+                                <Image url="@images/backicon.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <!-- Scrollable Text -->
+                <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutX="50.0" layoutY="80.0" prefHeight="490.0" prefWidth="800.0"
+                            style="-fx-background-color: transparent; -fx-background: transparent; -fx-control-inner-background: transparent;">
+
+                    <AnchorPane fx:id="contentPane" prefHeight="1000.0" prefWidth="760.0" style="-fx-background-color: transparent;">
+
+                        <!-- About Title -->
+                        <Label layoutX="250.0" layoutY="20.0" text="About CricMart"
+                               style="-fx-text-fill: #40c4ff; -fx-font-family: 'Segoe UI Semibold'; -fx-font-size: 32px;" />
+
+                        <!-- Developer Info -->
+                        <Text layoutX="20.0" layoutY="80.0" text="CricMart – IPL Player Database and Live Auction System"
+                              style="-fx-fill: #cde9ff; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px; -fx-font-weight: bold;" />
+                        <Text layoutX="20.0" layoutY="105.0" text="Developed by: Md. Misbah Uddin Rafi and Joyanto Sutradhar"
+                              style="-fx-fill: #cde9ff; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px; -fx-font-weight: bold;" />
+                        <Text layoutX="20.0" layoutY="130.0" text="Supervisor: Md. Ashraful Islam, Assistant Professor, Department of CSE, BUET"
+                              style="-fx-fill: #cde9ff; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px; -fx-font-weight: bold;" />
+
+                        <!-- Project Overview -->
+                        <Label layoutX="20.0" layoutY="160.0" text="Project Overview"
+                               style="-fx-text-fill: #ffc107; -fx-font-family: 'Segoe UI Semibold'; -fx-font-size: 28px;" />
+                        <Text layoutX="20.0" layoutY="220.0" text="CricMart is an interactive JavaFX-based application that allows users"
+                              style="-fx-fill: #ffffff; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="245.0" text="to explore IPL players and club information and enjoy live auction simulations."
+                              style="-fx-fill: #ffffff; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="270.0" text="Users can search for players, view club statistics, and participate in mock auctions."
+                              style="-fx-fill: #ffffff; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+
+                        <!-- Key Features -->
+                        <Label layoutX="20.0" layoutY="310.0" text="Key Features"
+                               style="-fx-text-fill: #00e676; -fx-font-family: 'Segoe UI Semibold'; -fx-font-size: 28px;" />
+                        <Text layoutX="20.0" layoutY="370.0" text="• Search players by name, country, club, position and salary range"
+                              style="-fx-fill: #e0f7fa; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="395.0" text="• View IPL club details"
+                              style="-fx-fill: #e0f7fa; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="420.0" text="• Simulate live player auctions"
+                              style="-fx-fill: #e0f7fa; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="445.0" text="• Role-based access: Admin and Viewer"
+                              style="-fx-fill: #e0f7fa; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="470.0" text="• Session tracking and logging"
+                              style="-fx-fill: #e0f7fa; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+
+                        <!-- Technologies Used -->
+                        <Label layoutX="20.0" layoutY="510.0" text="Technologies Used"
+                               style="-fx-text-fill: #ff8a65; -fx-font-family: 'Segoe UI Semibold'; -fx-font-size: 28px;" />
+                        <Text layoutX="20.0" layoutY="570.0" text="• JavaFX, JDK 21"
+                              style="-fx-fill: #ffe0b2; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="595.0" text="• Scene Builder"
+                              style="-fx-fill: #ffe0b2; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="620.0" text="• Multithreading for auction"
+                              style="-fx-fill: #ffe0b2; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="645.0" text="• File I/O for persistence"
+                              style="-fx-fill: #ffe0b2; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="670.0" text="• Java Sockets"
+                              style="-fx-fill: #ffe0b2; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+
+                        <!-- Academic Context -->
+                        <Label layoutX="20.0" layoutY="710.0" text="Academic Context"
+                               style="-fx-text-fill: #82b1ff; -fx-font-family: 'Segoe UI Semibold'; -fx-font-size: 28px;" />
+                        <Text layoutX="20.0" layoutY="770.0" text="This project was developed as a term project (L1T2) for the Object-Oriented Programming"
+                              style="-fx-fill: #ffffff; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+                        <Text layoutX="20.0" layoutY="795.0" text="course (ID: CSE108) in the Department of CSE, BUET."
+                              style="-fx-fill: #ffffff; -fx-font-family: 'Trebuchet MS'; -fx-font-size: 18px;" />
+
+                    </AnchorPane>
+                </ScrollPane>
+            </AnchorPane>
+        </StackPane>
+    </center>
+</BorderPane>

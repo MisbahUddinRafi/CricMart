@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style1.css"
+           xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.cardrelatedcontrollers.CountryCardController">
+
+    <!-- Background image -->
+    <ImageView fitHeight="600" fitWidth="900">
+        <image>
+            <Image url="@images/image2.png"/>
+        </image>
+    </ImageView>
+
+    <BorderPane prefHeight="600.0" prefWidth="900.0">
+
+        <top>
+            <!-- Top Bar -->
+            <AnchorPane prefHeight="100.0" minHeight="100.0" maxHeight="100.0">
+                <children>
+                    <Button fx:id="backButton" layoutX="20.0" layoutY="20.0" onAction="#goToBack"
+                            style="-fx-background-color: transparent;" styleClass="logout-button">
+                        <graphic>
+                            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@images/backicon.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+                      <Label fx:id="countryNameLabel" layoutX="300.0" layoutY="25.0"
+                                                         prefWidth="300.0" prefHeight="50.0" alignment="CENTER"
+                                                         styleClass="title-button"
+                                                         style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"
+                                                         text="India" />
+                </children>
+            </AnchorPane>
+        </top>
+
+        <center>
+            <ScrollPane fitToWidth="true" prefHeight="500.0" style="-fx-background-color: transparent; -fx-background: transparent; -fx-control-inner-background: transparent;">
+                <content>
+                    <AnchorPane fx:id="playerClubListAnchorPane" minHeight="500.0" prefWidth="880.0" >
+                            <Button layoutX="130.0" layoutY="10.0" prefWidth="250.0" prefHeight="40.0" text="Player" styleClass="title-button" style="-fx-font-size: 15px; -fx-font-weight: bold;" />
+                            <Button layoutX="400.0" layoutY="10.0" prefWidth="350.0" prefHeight="40.0" text="Club" styleClass="title-button" style="-fx-font-size: 15px; -fx-font-weight: bold;" />
+                            <Button layoutX="130.0" layoutY="60.0" prefWidth="250.0" prefHeight="40.0" text="Abhishek Sharma" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="60.0" prefWidth="350.0" prefHeight="40.0" text="Royal Challengers Bangalore" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="110.0" prefWidth="250.0" prefHeight="40.0" text="Axar Patel" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="110.0" prefWidth="350.0" prefHeight="40.0" text="Delhi Capitals" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="160.0" prefWidth="250.0" prefHeight="40.0" text="Bhuvneshwar Kumar" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="160.0" prefWidth="350.0" prefHeight="40.0" text="Sunrisers Hyderabad" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="210.0" prefWidth="250.0" prefHeight="40.0" text="Deepak Chahar" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="210.0" prefWidth="350.0" prefHeight="40.0" text="Chennai Super Kings" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="260.0" prefWidth="250.0" prefHeight="40.0" text="Dinesh Karthik" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="260.0" prefWidth="350.0" prefHeight="40.0" text="Royal Challengers Bangalore" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="310.0" prefWidth="250.0" prefHeight="40.0" text="Hardik Pandya" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="310.0" prefWidth="350.0" prefHeight="40.0" text="Gujarat Titans" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="360.0" prefWidth="250.0" prefHeight="40.0" text="Harshal Patel" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="360.0" prefWidth="350.0" prefHeight="40.0" text="Royal Challengers Bangalore" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="410.0" prefWidth="250.0" prefHeight="40.0" text="Ishan Kishan" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="410.0" prefWidth="350.0" prefHeight="40.0" text="Mumbai Indians" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="460.0" prefWidth="250.0" prefHeight="40.0" text="Jasprit Bumrah" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="460.0" prefWidth="350.0" prefHeight="40.0" text="Mumbai Indians" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="510.0" prefWidth="250.0" prefHeight="40.0" text="KL Rahul" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="510.0" prefWidth="350.0" prefHeight="40.0" text="" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="560.0" prefWidth="250.0" prefHeight="40.0" text="Krunal Pandya" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="560.0" prefWidth="350.0" prefHeight="40.0" text="Lucknow Super Giants" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="610.0" prefWidth="250.0" prefHeight="40.0" text="Kuldeep Yadav" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="610.0" prefWidth="350.0" prefHeight="40.0" text="Delhi Capitals" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="660.0" prefWidth="250.0" prefHeight="40.0" text="MS Dhoni" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="660.0" prefWidth="350.0" prefHeight="40.0" text="Chennai Super Kings" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="710.0" prefWidth="250.0" prefHeight="40.0" text="Mohammed Shami" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="710.0" prefWidth="350.0" prefHeight="40.0" text="Gujarat Titans" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="760.0" prefWidth="250.0" prefHeight="40.0" text="Mohammed Siraj" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="760.0" prefWidth="350.0" prefHeight="40.0" text="Royal Challengers Bangalore" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="810.0" prefWidth="250.0" prefHeight="40.0" text="Mohit Sharma" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="810.0" prefWidth="350.0" prefHeight="40.0" text="Dummy Club" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="860.0" prefWidth="250.0" prefHeight="40.0" text="Prithvi Shaw" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="860.0" prefWidth="350.0" prefHeight="40.0" text="Delhi Capitals" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="910.0" prefWidth="250.0" prefHeight="40.0" text="Rahul Tewatia" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="910.0" prefWidth="350.0" prefHeight="40.0" text="Royal Challengers Bangalore" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="960.0" prefWidth="250.0" prefHeight="40.0" text="Rahul Tripathi" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="960.0" prefWidth="350.0" prefHeight="40.0" text="Chennai Super Kings" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1010.0" prefWidth="250.0" prefHeight="40.0" text="Ravindra Jadeja" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1010.0" prefWidth="350.0" prefHeight="40.0" text="Chennai Super Kings" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1060.0" prefWidth="250.0" prefHeight="40.0" text="Rohit Sharma" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1060.0" prefWidth="350.0" prefHeight="40.0" text="Mumbai Indians" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1110.0" prefWidth="250.0" prefHeight="40.0" text="Ruturaj Gaikwad" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1110.0" prefWidth="350.0" prefHeight="40.0" text="Chennai Super Kings" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1160.0" prefWidth="250.0" prefHeight="40.0" text="Sai Sudharsan" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1160.0" prefWidth="350.0" prefHeight="40.0" text="" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1210.0" prefWidth="250.0" prefHeight="40.0" text="Sanju Samson" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1210.0" prefWidth="350.0" prefHeight="40.0" text="Rajasthan Royals" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1260.0" prefWidth="250.0" prefHeight="40.0" text="Shikhar Dhawan" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1260.0" prefWidth="350.0" prefHeight="40.0" text="Punjab Kings" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1310.0" prefWidth="250.0" prefHeight="40.0" text="Shivam Dube" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1310.0" prefWidth="350.0" prefHeight="40.0" text="Chennai Super Kings" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1360.0" prefWidth="250.0" prefHeight="40.0" text="Shubman Gill" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1360.0" prefWidth="350.0" prefHeight="40.0" text="Gujarat Titans" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1410.0" prefWidth="250.0" prefHeight="40.0" text="Suryakumar Yadav" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1410.0" prefWidth="350.0" prefHeight="40.0" text="Mumbai Indians" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1460.0" prefWidth="250.0" prefHeight="40.0" text="T Natarajan" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1460.0" prefWidth="350.0" prefHeight="40.0" text="Dummy Club" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1510.0" prefWidth="250.0" prefHeight="40.0" text="Tilak Varma" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1510.0" prefWidth="350.0" prefHeight="40.0" text="Chennai Super Kings" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1560.0" prefWidth="250.0" prefHeight="40.0" text="Umran Malik" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1560.0" prefWidth="350.0" prefHeight="40.0" text="Dummy Club" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1610.0" prefWidth="250.0" prefHeight="40.0" text="Venkatesh Iyer" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1610.0" prefWidth="350.0" prefHeight="40.0" text="Kolkata Knight Riders" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1660.0" prefWidth="250.0" prefHeight="40.0" text="Virat Kohli" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1660.0" prefWidth="350.0" prefHeight="40.0" text="Royal Challengers Bangalore" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1710.0" prefWidth="250.0" prefHeight="40.0" text="Washington Sundar" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1710.0" prefWidth="350.0" prefHeight="40.0" text="Sunrisers Hyderabad" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1760.0" prefWidth="250.0" prefHeight="40.0" text="Wriddhiman Saha" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1760.0" prefWidth="350.0" prefHeight="40.0" text="Royal Challengers Bangalore" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                            <Button layoutX="130.0" layoutY="1810.0" prefWidth="250.0" prefHeight="40.0" text="Yuzvendra Chahal" styleClass="sidebar-button"  onAction="#showPlayerCard"/>
+                            <Button layoutX="400.0" layoutY="1810.0" prefWidth="350.0" prefHeight="40.0" text="Rajasthan Royals" styleClass="sidebar-button"  onAction="#showClubCard"/>
+                    </AnchorPane>
+                </content>
+            </ScrollPane>
+        </center>
+
+    </BorderPane>
+</StackPane>

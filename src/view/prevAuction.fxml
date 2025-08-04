@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.auctionRelated.AuctionHistoryController">
+    <ImageView fitHeight="600" fitWidth="900">
+        <image><Image url="@images/image2.png"/></image>
+    </ImageView>
+
+    <BorderPane prefHeight="600.0" prefWidth="900.0">
+        <top>
+            <AnchorPane prefHeight="100.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);">
+                <Button fx:id="backButton" layoutX="20.0" layoutY="30.0" onAction="#handleBackToDashboard" style="-fx-background-color: transparent;" styleClass="logout-button">
+                    <graphic><ImageView fitHeight="30" fitWidth="30"><Image url="@images/backicon.png"/></ImageView></graphic>
+                </Button>
+                <Label layoutX="300.0" layoutY="25.0" prefWidth="300.0" prefHeight="50.0" alignment="CENTER"
+                       styleClass="title-button"
+                       style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-text-fill: linear-gradient(to right, #6d1b7b, #c503b8); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0, 0, 0);"
+                       text="Previous Auctions" />
+            </AnchorPane>
+        </top>
+
+        <center>
+            <ScrollPane fitToWidth="true" styleClass="transparent-scrollpane" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+                <content>
+                    <AnchorPane fx:id="auctionListAnchorPane" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: rgba(255, 255, 255, 0.1);">
+                        <HBox alignment="CENTER_LEFT" layoutX="28.0" layoutY="10.0" prefHeight="40.0" prefWidth="830.0" style="-fx-background-color: #2e4f4f; -fx-background-radius: 8;">
+                            <Label text="Auction Date &amp; Time" prefWidth="280.0" alignment="CENTER" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                            <Label text="Players Sold" prefWidth="160.0" alignment="CENTER" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                            <Label text="Duration (s)" prefWidth="160.0" alignment="CENTER" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                            <Label text="Auction ID (Partial)" prefWidth="230.0" alignment="CENTER" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                        </HBox>
+
+                        <VBox fx:id="auctionEntriesVBox" layoutX="28.0" layoutY="60.0" prefWidth="830.0" spacing="10.0">
+                        </VBox>
+                    </AnchorPane>
+                </content>
+            </ScrollPane>
+        </center>
+    </BorderPane>
+</StackPane>

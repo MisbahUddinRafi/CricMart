@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.userprofilerelatedcontrollers.ClubProfileController">
+
+    <!-- Background image -->
+    <ImageView fitHeight="600" fitWidth="900" preserveRatio="false">
+        <image>
+            <Image url="@images/image2.png"/>
+        </image>
+    </ImageView>
+
+    <BorderPane prefHeight="600.0" prefWidth="900.0">
+
+        <top>
+            <!-- Back Button in the top left corner -->
+            <Button fx:id="backButton" layoutX="30" layoutY="30" onAction="#goToBack"
+                    style="-fx-background-color: transparent;" styleClass="logout-button">
+                <graphic>
+                    <ImageView fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@images/backicon.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </top>
+
+
+        <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+                <children>
+
+
+                    <Label layoutX="322.0" layoutY="102.0" prefHeight="23.0" prefWidth="99.0" text="User type: "
+                           textFill="#aeded1" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="448.6666666666666">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="usertypeField" alignment="CENTER" editable="false" layoutX="429.0" layoutY="95.0"
+                               prefHeight="38.0" prefWidth="175.0" styleClass="display-field" text="Club">
+                        <cursor>
+                            <Cursor fx:constant="DEFAULT"/>
+                        </cursor>
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </TextField>
+
+
+                    <Label layoutX="96.0" layoutY="159.0" prefHeight="23.0" prefWidth="115.0" text="Username: "
+                           textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="usernameField" alignment="CENTER" editable="false" layoutX="210.0" layoutY="152.0"
+                               prefHeight="39.0" prefWidth="200.0" styleClass="display-field" text="rcbadmin">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </TextField>
+
+
+                    <Button fx:id="editUsernameButton" layoutX="472.0" layoutY="282.0" mnemonicParsing="false"
+                            onAction="#goToEditUsername" prefHeight="41.0" prefWidth="175.0" styleClass="sidebar-button"
+                            text="Edit username"/>
+                    <Button fx:id="editPasswordButton" layoutX="254.0" layoutY="282.0" mnemonicParsing="false"
+                            onAction="#goToEditPassword" prefHeight="41.0" prefWidth="175.0" styleClass="sidebar-button"
+                            text="Edit password"/>
+                    <Button layoutX="362.0" layoutY="398.0" mnemonicParsing="false" onAction="#onDeleteAccount"
+                            prefHeight="41.0" prefWidth="175.0" styleClass="logout-button" text="Delete account"/>
+
+
+                    <Button fx:id="logoutButton" layoutX="773.0" layoutY="467.0" onAction="#handleLogOut"
+                            prefHeight="30" prefWidth="80"
+                            style="-fx-background-color: #ff4d4d; -fx-text-fill: white; -fx-font-weight: bold;"
+                            styleClass="logout-button" text="Logout"/>
+
+                    <Button fx:id="editClubInfoButton" layoutX="472.0" layoutY="336.0" mnemonicParsing="false"
+                            onAction="#goToEditClubInfo" prefHeight="41.0" prefWidth="175.0" styleClass="sidebar-button"
+                            text="Edit Club Info"/>
+
+                    <Button fx:id="releasePlayerButton" layoutX="257.0" layoutY="336.0" mnemonicParsing="false"
+                            onAction="#goToReleasePlayer" prefHeight="41.0" prefWidth="175.0"
+                            styleClass="sidebar-button" text="Release Player"/>
+
+
+                    <Label layoutX="485.0" layoutY="159.0" prefHeight="23.0" prefWidth="115.0" text="Club Name:"
+                           textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="clubNameField" alignment="CENTER" editable="false" layoutX="599.0" layoutY="152.0"
+                               prefHeight="39.0" prefWidth="250.0" styleClass="display-field" text="Royal Challengers Bangalore">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </TextField>
+                    <Label layoutX="451.0" layoutY="210.0" prefHeight="23.0" prefWidth="147.0" text="Manager Name:"
+                           textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="managerNameField" alignment="CENTER" editable="false" layoutX="599.0"
+                               layoutY="202.0" prefHeight="39.0" prefWidth="250.0" styleClass="display-field"
+                               text="Faf Du Plessis">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </TextField>
+                    <Label layoutX="96.0" layoutY="210.0" prefHeight="23.0" prefWidth="115.0" text="ShortForm:"
+                           textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0"/>
+                        </font>
+                    </Label>
+                    <TextField fx:id="shortFormField" alignment="CENTER" editable="false" layoutX="210.0"
+                               layoutY="203.0" prefHeight="39.0" prefWidth="200.0" styleClass="display-field"
+                               text="RCB">
+                        <font>
+                            <Font size="18.0"/>
+                        </font>
+                    </TextField>
+                </children>
+            </AnchorPane>
+        </center>
+    </BorderPane>
+</StackPane>
+

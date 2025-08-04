@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Font?>
+<StackPane xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.loginrelatedcontrollers.LoginFormController"
+           stylesheets="@style1.css"
+           prefHeight="600.0" prefWidth="900.0">
+
+    <!-- Background image -->
+    <ImageView fitWidth="900" fitHeight="600" preserveRatio="false">
+        <image>
+            <Image url="@images/image2.png"/>
+        </image>
+    </ImageView>
+
+
+    <!-- Foreground layout -->
+    <BorderPane>
+
+        <top>
+            <!-- Back Button in the top left corner -->
+            <Button fx:id="backButton" layoutX="30" layoutY="30"
+                    styleClass="logout-button"
+                    style="-fx-background-color: transparent;" onAction="#gotoLoginPage">
+                <graphic>
+                    <ImageView fitWidth="60" fitHeight="60" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@images/backicon.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+        </top>
+
+        <center>
+            <VBox alignment="center"
+                  prefHeight="600.0"
+                  prefWidth="900.0"
+                  spacing="15">
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20"/>
+                </padding>
+
+                <Label text="User Login" textFill="#aeded1">
+                    <font>
+                        <Font name="Arial" size="28.0" />
+                    </font>
+                </Label>
+
+                <ChoiceBox fx:id="userTypeBox" prefWidth="200" styleClass="choice-box"/>
+                <TextField fx:id="usernameField" prefWidth="200" promptText="Enter username" styleClass="input-field"/>
+                <PasswordField fx:id="passwordField" prefWidth="200" promptText="Enter password" styleClass="input-field"/>
+                <Button onAction="#handleLogin" prefWidth="150" text="Log In" styleClass="sidebar-button"/>
+            </VBox>
+        </center>
+
+    </BorderPane>
+</StackPane>
+
+
+
+
+
+
+
+
+
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<!--<?import javafx.geometry.Insets?>-->
+<!--<?import javafx.scene.control.Button?>-->
+<!--<?import javafx.scene.control.ChoiceBox?>-->
+<!--<?import javafx.scene.control.Label?>-->
+<!--<?import javafx.scene.control.PasswordField?>-->
+<!--<?import javafx.scene.control.TextField?>-->
+<!--<?import javafx.scene.layout.BorderPane?>-->
+<!--<?import javafx.scene.layout.VBox?>-->
+
+
+<!--<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.loginrelatedcontrollers.LoginFormController" stylesheets="@style1.css">-->
+<!--    <top>-->
+<!--        <Button fx:id="backButton" mnemonicParsing="false" onAction="#gotoLoginPage" text="Back" styleClass="sidebar-button" BorderPane.alignment="TOP_LEFT" />-->
+<!--    </top>-->
+
+<!--    <center>-->
+<!--        <VBox alignment="center" prefHeight="600.0" prefWidth="900.0" spacing="15">-->
+<!--            <padding>-->
+<!--                <Insets bottom="20" left="20" right="20" top="20" />-->
+<!--            </padding>-->
+
+<!--            <Label text="User Login" />-->
+<!--            <ChoiceBox fx:id="userTypeBox" prefWidth="200" styleClass="choice-box"/>-->
+<!--            <TextField fx:id="usernameField" prefWidth="200" promptText="Enter username" styleClass="input-field"/>-->
+<!--            <PasswordField fx:id="passwordField" prefWidth="200" promptText="Enter password" styleClass="input-field"/>-->
+<!--            <Button onAction="#handleLogin" prefWidth="150" text="Log In" styleClass="sidebar-button" />-->
+
+<!--        </VBox>-->
+<!--    </center>-->
+
+<!--</BorderPane>-->
+
+
+

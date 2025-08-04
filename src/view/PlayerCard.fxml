@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.cardrelatedcontrollers.PlayerCardController">
+
+    <!-- Background image -->
+    <ImageView fitHeight="600" fitWidth="900" preserveRatio="false">
+        <image>
+            <Image url="@images/image2.png" />
+        </image>
+    </ImageView>
+
+    <BorderPane prefHeight="600.0" prefWidth="900.0">
+
+        <top>
+            <!-- Back Button in the top left corner -->
+            <Button fx:id="backButton" layoutX="30" layoutY="30" onAction="#goToBack" style="-fx-background-color: transparent;" styleClass="logout-button">
+                <graphic>
+                    <ImageView fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@images/backicon.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </top>
+      <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+                <children>
+                    <TextField editable="false" fx:id="playerNameField" alignment="CENTER" layoutX="371.0" layoutY="281.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="Josh Little" />
+
+
+                    <Label layoutX="23.0" layoutY="83.0" prefHeight="23.0" prefWidth="89.0" text="Country: " textFill="#aeded1" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="751.6666666666667">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="countryNameField" layoutX="134.0" layoutY="75.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="Ireland">
+                        <cursor>
+                            <Cursor fx:constant="DEFAULT" />
+                        </cursor>
+                    </TextField>
+
+
+                    <Label layoutX="622.0" layoutY="81.0" text="Age: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="ageField" layoutX="715.0" layoutY="75.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="24" />
+
+
+                    <Label layoutX="23.0" layoutY="241.0" text="Matches: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="matchesPlayedField" layoutX="132.0" layoutY="234.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="22" />
+
+
+                    <Label layoutX="23.0" layoutY="291.0" text="Balls: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="ballsFacedField" layoutX="132.0" layoutY="284.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="3096" />
+
+
+                    <Label layoutX="23.0" layoutY="391.0" text="Fifties: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="fiftiesField" layoutX="132.0" layoutY="384.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="0" />
+
+
+                    <Label layoutX="23.0" layoutY="341.0" text="Runs: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="runsScoredField" layoutX="132.0" layoutY="334.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="2296" />
+
+
+                    <Label layoutX="599.0" layoutY="388.0" text="Runs Given: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="runsConcededField" layoutX="715.0" layoutY="382.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="633" />
+
+
+                    <Label layoutX="25.0" layoutY="132.0" text="Position: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="positionField" layoutX="134.0" layoutY="125.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="Bowler" />
+
+
+                    <Label layoutX="617.0" layoutY="132.0" text="Height: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="heightField" layoutX="715.0" layoutY="127.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="1.88" />
+
+
+                    <Label layoutX="617.0" layoutY="182.0" text="Jersey: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="jerseyNumberField" layoutX="715.0" layoutY="177.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="38" />
+
+
+                    <Label layoutX="616.0" layoutY="287.0" text="Wickets: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="wicketsField" layoutX="714.0" layoutY="283.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="84" />
+
+
+                    <Label layoutX="19.0" layoutY="440.0" text="Centuries: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="centuriesField" layoutX="132.0" layoutY="431.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="7" />
+
+
+                    <Label layoutX="617.0" layoutY="237.0" text="Overs: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="overField" layoutX="715.0" layoutY="233.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="92.3" />
+
+
+                    <Label layoutX="617.0" layoutY="339.0" text="Hat-tricks: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="hattricksField" layoutX="714.0" layoutY="335.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="0" />
+
+
+                    <Label layoutX="603.0" layoutY="440.0" text="Base Price: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField editable="false" fx:id="basePriceField" layoutX="715.0" layoutY="434.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="15987061" />
+
+
+
+
+
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="371.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@images/profileIcon1.png" />
+                        </image>
+                    </ImageView>
+
+
+               <TextField editable="false" fx:id="clubNameField" alignment="CENTER" layoutX="338.0" layoutY="324.0" prefHeight="35.0" prefWidth="215.0" styleClass="display-field" text="Kolkata Knight Riders">
+                  <cursor>
+                     <Cursor fx:constant="DEFAULT" />
+                  </cursor>
+                  <font>
+                     <Font name="System Bold" size="24.0" />
+                  </font>
+               </TextField>
+
+               <Label layoutX="21.0" layoutY="182.0" text="Salary: " textFill="#aeded1">
+                  <font>
+                     <Font name="Arial" size="20.0" />
+                  </font>
+               </Label>
+               <TextField editable="false" fx:id="salaryField" layoutX="134.0" layoutY="176.0" prefHeight="35.0" prefWidth="150.0" styleClass="display-field" text="20987061" />
+
+
+
+                </children>
+            </AnchorPane>
+      </center>
+    </BorderPane>
+</StackPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<?import javafx.scene.layout.VBox?>-->
+<!--<?import javafx.scene.control.*?>-->
+<!--<?import javafx.geometry.Insets?>-->
+<!--<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"-->
+<!--      fx:controller="controller.ViewerDashboardController"-->
+<!--      alignment="center" spacing="20" prefHeight="600.0" prefWidth="900.0">-->
+<!--    <padding>-->
+<!--        <Insets top="20" right="20" bottom="20" left="20"/>-->
+<!--    </padding>-->
+<!--    <Label fx:id="welcomeLabel" text="Welcome Viewer"/>-->
+<!--    <Button text="Log Out" onAction="#handleLogOut" prefWidth="150"/>-->
+<!--</VBox>-->
+
+<BorderPane prefHeight="600" prefWidth="900" style="-fx-background-color: #33e6ff;" stylesheets="@style1.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.ViewerDashboardController">
+
+    <left>
+        <VBox alignment="CENTER" prefHeight="600" prefWidth="180" spacing="0" style="-fx-background-color: linear-gradient(to bottom, #c2e3e3, #586e6e); -fx-padding: 20 10 20 10;">
+            <Button maxWidth="180" onAction="#handleSearchPlayer" prefHeight="75" styleClass="sidebar-button" text="Search Player" />
+            <Button maxWidth="180" onAction="#handlePlayers" prefHeight="75" styleClass="sidebar-button" text="Players" />
+            <Button maxWidth="180" onAction="#handleTeams" prefHeight="75" styleClass="sidebar-button" text="Teams" />
+            <Button maxWidth="180" onAction="#handleLiveAuction" prefHeight="75" styleClass="sidebar-button" text="Live Auction" />
+            <Button maxWidth="180" onAction="#handlePreviousAuctions" prefHeight="75" styleClass="sidebar-button" text="Past Auctions" />
+            <Button maxWidth="180" onAction="#handleAboutUs" prefHeight="75" styleClass="sidebar-button" text="About Us" />
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane>
+            <ImageView fitHeight="600" fitWidth="749.0" preserveRatio="false" smooth="false">
+                <image>
+                    <Image url="@images/image1.png" />
+                </image>
+            </ImageView>
+
+            <AnchorPane prefHeight="600" prefWidth="720">
+                <Button fx:id="iconButton" layoutX="680" layoutY="10" onAction="#handleProfile" style="-fx-background-color: transparent;" styleClass="logout-button">
+                    <graphic>
+                        <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@images/profile2.gif" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button fx:id="logoutButton" layoutX="620" layoutY="550" onAction="#handleLogOut" prefHeight="30" prefWidth="80" style="-fx-background-color: #ff4d4d; -fx-text-fill: white; -fx-font-weight: bold;" styleClass="logout-button" text="Logout" />
+            </AnchorPane>
+        </StackPane>
+    </center>
+</BorderPane>

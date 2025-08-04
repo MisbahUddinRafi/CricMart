@@ -1,0 +1,445 @@
+.sidebar-button {
+    -fx-background-color: linear-gradient(to bottom, #d2f1e9, #aeded1);
+    -fx-text-fill: #1e1e1e;
+    -fx-font-size: 15px;
+    -fx-font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.1, 0, 1);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #32926f, #167a5d);
+    -fx-text-fill: white;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.3, 0, 2);
+}
+
+/* Logout Button Style */
+.logout-button {
+    -fx-background-color: #ff4d4d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-padding: 6 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.3, 0, 1);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    -fx-background-color: #cc0000;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+/* Extra added by Rafi for the login form page */
+/* Input Fields (TextField and PasswordField) */
+.input-field {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e0f2f1);
+    -fx-text-fill: #1e1e1e;
+    -fx-font-size: 14px;
+    -fx-font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -fx-padding: 8 12;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #a0cfc4;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 1, 0.1, 0, 1);
+    -fx-cursor: text;
+    -fx-prompt-text-fill: #888;
+}
+
+/* Input Fields on Focus */
+.input-field:focused {
+    -fx-border-color: #32926f;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.3, 0, 1);
+}
+
+/* ChoiceBox Style */
+.choice-box {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e0f2f1);
+    -fx-mark-color: #32926f;
+    -fx-font-size: 14px;
+    -fx-font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #a0cfc4;
+    -fx-border-width: 1;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 1, 0.1, 0, 1);
+}
+
+.choice-box:focused {
+    -fx-border-color: #32926f;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.3, 0, 1);
+}
+
+.input-error {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+}
+
+.display-field {
+    -fx-background-color: #f9f9f9;
+    -fx-text-fill: #333;
+    -fx-font-size: 15px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d0d0d0;
+    -fx-border-width: 1;
+    -fx-opacity: 1.0; /* makes sure text is not greyed out */
+    -fx-padding: 8 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.03), 2, 0.1, 0, 1);
+}
+
+.circular-image {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0.3, 0, 2);
+    -fx-border-color: #32926f;
+    -fx-border-width: 2;
+}
+
+.title-button {
+    -fx-background-color: linear-gradient(to bottom, #32926f, #167a5d);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.1, 0, 1);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.header-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.transparent-scrollpane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 10;
+}
+
+.player-button, .club-button {
+    -fx-font-size: 14px;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 10;
+}
+.center-pane {
+    -fx-background-image: url("images/image1.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.centerpane {
+    -fx-background-image: url("images/image2.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.info-card {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0.3, 0, 2);
+}
+
+.timer-card {
+    -fx-background-color: linear-gradient(to bottom, #ff4444, #cc0000);
+    -fx-background-radius: 15;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0.4, 0, 3);
+}
+.auction-row {
+    -fx-background-color: rgba(60, 100, 100, 0.7);
+    -fx-background-radius: 8;
+    -fx-border-color: #90caf9;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8;
+    -fx-padding: 0 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 0);
+    -fx-transition: -fx-background-color 0.2s ease, -fx-effect 0.2s ease;
+}
+
+.auction-row:hover {
+    -fx-background-color: rgba(90, 130, 130, 0.9);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 0);
+}
+
+.auction-row-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 10;
+}
+
+.auction-row-label-center {
+    -fx-alignment: CENTER;
+}
+
+.auction-row-id-label {
+    -fx-text-fill: #a0dfff;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 10;
+}
+
+
+
+
+.sidebar-button {
+    -fx-background-color: linear-gradient(to bottom, #d2f1e9, #aeded1);
+    -fx-text-fill: #1e1e1e;
+    -fx-font-size: 15px;
+    -fx-font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.1, 0, 1);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #32926f, #167a5d);
+    -fx-text-fill: white;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.3, 0, 2);
+}
+
+/* Logout Button Style */
+.logout-button {
+    -fx-background-color: #ff4d4d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-padding: 6 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.3, 0, 1);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+    -fx-background-color: #cc0000;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+/* Extra added by Rafi for the login form page */
+/* Input Fields (TextField and PasswordField) */
+.input-field {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e0f2f1);
+    -fx-text-fill: #1e1e1e;
+    -fx-font-size: 14px;
+    -fx-font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -fx-padding: 8 12;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #a0cfc4;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 1, 0.1, 0, 1);
+    -fx-cursor: text;
+    -fx-prompt-text-fill: #888;
+}
+
+/* Input Fields on Focus */
+.input-field:focused {
+    -fx-border-color: #32926f;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.3, 0, 1);
+}
+
+/* ChoiceBox Style */
+.choice-box {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e0f2f1);
+    -fx-mark-color: #32926f;
+    -fx-font-size: 14px;
+    -fx-font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #a0cfc4;
+    -fx-border-width: 1;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 1, 0.1, 0, 1);
+}
+
+.choice-box:focused {
+    -fx-border-color: #32926f;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0.3, 0, 1);
+}
+
+.input-error {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+}
+
+.display-field {
+    -fx-background-color: #f9f9f9;
+    -fx-text-fill: #333;
+    -fx-font-size: 15px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d0d0d0;
+    -fx-border-width: 1;
+    -fx-opacity: 1.0; /* makes sure text is not greyed out */
+    -fx-padding: 8 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.03), 2, 0.1, 0, 1);
+}
+
+.circular-image {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0.3, 0, 2);
+    -fx-border-color: #32926f;
+    -fx-border-width: 2;
+}
+
+.title-button {
+    -fx-background-color: linear-gradient(to bottom, #32926f, #167a5d);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-family: "Trebuchet MS", Helvetica, sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0.1, 0, 1);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.header-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.transparent-scrollpane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 10;
+}
+
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+
+
+.player-button, .club-button {
+    -fx-font-size: 14px;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 10;
+}
+
+
+
+
+
+/* new codes for about us page: */
+
+.about-us-pane {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-background-color: transparent;
+}
+
+.header-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #167a5d;
+}
+
+.subheader-label {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #32926f;
+}
+
+.text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1e1e1e;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* ADDITIONS FOR 'About Us' page with dark background image */
+/* ─────────────────────────────────────────────────────────────── */
+
+/* Make the scroll pane background fully transparent */
+.transparent-scrollpane,
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* Ensure the ScrollPane viewport (content area) is also transparent */
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Optional: Fade scrollbars unless hovered */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-opacity: 0.3;
+}
+
+.scroll-bar:vertical:hover,
+.scroll-bar:horizontal:hover {
+    -fx-opacity: 1.0;
+}
+
+/* White text for general <Text> elements in About Us */
+.about-us-text {
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* White subheader label for dark backgrounds */
+.about-us-subheader {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* White header label override */
+.about-us-header {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+

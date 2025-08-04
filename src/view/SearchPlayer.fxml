@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style1.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchPlayerController">
+
+    <!-- Background image -->
+    <ImageView fitHeight="600" fitWidth="900" preserveRatio="false">
+        <image>
+            <Image url="@images/image2.png" />
+        </image>
+    </ImageView>
+
+
+    <BorderPane prefHeight="600.0" prefWidth="900.0">
+
+        <top>
+            <!-- Back Button in the top left corner -->
+            <Button fx:id="backButton" layoutX="30" layoutY="30" onAction="#goToBack" style="-fx-background-color: transparent;" styleClass="logout-button">
+                <graphic>
+                    <ImageView fitHeight="60" fitWidth="60" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@images/backicon.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </top>
+
+
+        <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+                <children>
+                    <Label layoutX="163.0" layoutY="94.0" prefHeight="23.0" prefWidth="89.0" text="Name:" textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="playerNameField" layoutX="297.0" layoutY="88.0" prefHeight="35.0" prefWidth="275.0" promptText="Enter name" styleClass="input-field" />
+                    <Button layoutX="631.0" layoutY="86.0" onAction="#onSearchByName" prefHeight="39.0" prefWidth="175.0" styleClass="sidebar-button" text="Search by name">
+
+                    </Button>
+
+
+                    <Label layoutX="132.0" layoutY="155.0" prefHeight="23.0" prefWidth="175.0" text="Country Name: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="countryNameField" layoutX="297.0" layoutY="149.0" prefHeight="35.0" prefWidth="275.0" promptText="Enter country name" styleClass="input-field" />
+                    <Button layoutX="631.0" layoutY="147.0" onAction="#onSearchByCountry" prefHeight="39.0" prefWidth="175.0" styleClass="sidebar-button" text="Search by country" />
+
+
+
+                    <Label layoutX="135.0" layoutY="221.0" prefHeight="23.0" prefWidth="117.0" text="Club Name: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="clubNameField" layoutX="297.0" layoutY="215.0" prefHeight="35.0" prefWidth="275.0" promptText="Enter club name" styleClass="input-field" />
+                    <Button layoutX="631.0" layoutY="213.0" onAction="#onSearchByClub" prefHeight="39.0" prefWidth="175.0" styleClass="sidebar-button" text="Search by club" />
+
+
+                    <Label layoutX="106.0" layoutY="282.0" prefHeight="23.0" prefWidth="175.0" text="Search by position:" textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <ChoiceBox fx:id="positionChoiceBox" layoutX="297.0" layoutY="273.0" prefHeight="41.0" prefWidth="276.0"/>
+                    <Button layoutX="631.0" layoutY="274.0" onAction="#onSearchByPosition" prefHeight="39.0" prefWidth="175.0" styleClass="sidebar-button" text="Search by position" />
+
+
+                    <Label layoutX="25.0" layoutY="346.0" prefHeight="23.0" prefWidth="152.0" text="Starting Salary: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="startingSalaryField" layoutX="171.0" layoutY="340.0" prefHeight="35.0" prefWidth="129.0" promptText="Starting salary" styleClass="input-field" />
+
+
+                    <Label layoutX="331.0" layoutY="346.0" prefHeight="23.0" prefWidth="152.0" text="Ending Salary: " textFill="#aeded1">
+                        <font>
+                            <Font name="Arial" size="20.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="endingSalaryField" layoutX="473.0" layoutY="340.0" prefHeight="35.0" prefWidth="129.0" promptText="Ending salary" styleClass="input-field" />
+
+                    <Button layoutX="631.0" layoutY="338.0" onAction="#onSearchBySalary" prefHeight="39.0" prefWidth="175.0" styleClass="sidebar-button" text="Search by salary" />
+
+                </children>
+            </AnchorPane>
+        </center>
+
+    </BorderPane>
+</StackPane>
