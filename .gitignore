@@ -1,29 +1,55 @@
-### IntelliJ IDEA ###
+[200~### Java & JavaFX ###
+*.class
+*.jar
+*.war
+*.ear
+
+# Compiled class files and build output
+/build/
+target/
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# JavaFX IntelliJ specific
+.idea/
+*.iml
+*.iws
 
-### VS Code ###
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven
+target/
+
+# VSCode
 .vscode/
 
-### Mac OS ###
+# OS-specific
 .DS_Store
+Thumbs.db
+
+# Logs and temp
+*.log
+*.tmp
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+# Scene Builder temp files
+*.fxml~
+~
